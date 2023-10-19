@@ -1,0 +1,50 @@
+class Carro:
+    def __init__(self, marca, modelo, ano, placa):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.placa = placa
+
+    def __str__(self):
+        return f"{self.marca} {self.modelo} ({self.ano}), Placa: {self.placa}"
+
+
+class Garagem:
+    def __init__(self):
+        self.carros = []
+
+    def adicionar_carro(self, carro):
+        self.carros.append(carro)
+        print(f"{carro} foi adicionado à garagem.")
+
+    def remover_carro(self, placa):
+        for carro in self.carros:
+            if carro.placa == placa:
+                self.carros.remove(carro)
+                print(f"{carro} foi removido da garagem.")
+                break
+        else:
+            print(f"Carro com a placa {placa} não encontrado na garagem.")
+
+    def listar_carros(self):
+        print("Carros na garagem:")
+        for carro in self.carros:
+            print(carro)
+
+# Exemplo de uso das classes
+
+carro1 = Carro("Toyota", "Corolla", 2022, "ABC123")
+carro2 = Carro("Honda", "Civic", 2021, "XYZ789")
+carro3 = Carro("Ford", "Focus", 2019, "123XYZ")
+
+garagem = Garagem()
+
+garagem.adicionar_carro(carro1)
+garagem.adicionar_carro(carro2)
+garagem.adicionar_carro(carro3)
+
+garagem.listar_carros()
+
+garagem.remover_carro("XYZ789")
+
+garagem.listar_carros()
