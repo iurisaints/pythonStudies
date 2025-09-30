@@ -1,8 +1,4 @@
-Claro, aqui estão suas anotações reescritas em texto corrido, com o script integrado e sem emojis.
-
------
-
-### **Minhas Anotações sobre Automação - Do Visual ao Código**
+### **Minhas Anotações sobre Automação - Aula 1**
 
 **Assunto:** Entender e começar a aplicar automação de tarefas.
 
